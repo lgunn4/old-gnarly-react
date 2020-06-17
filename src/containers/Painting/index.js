@@ -38,7 +38,7 @@ const Painting = () => {
            <ReactMarkdown source={painting.description} />
            <div className="backToHome">
              <Link to="/">
-               <a>← Back to home</a>
+               <p>← Back to home</p>
              </Link>
            </div>
          </div>
