@@ -1,0 +1,1 @@
+export const REACT_APP_BACKEND_URL = "http://oldgnarly-strapi.ddns.net:1337";
