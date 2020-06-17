@@ -31,7 +31,7 @@ const Painting = () => {
            )}
 
 
-           <img src={imageUrl}/>
+           <img src={imageUrl} alt={`painting-${painting.id}`}/>
            <br />
 
            <h2>{painting.title}</h2>
