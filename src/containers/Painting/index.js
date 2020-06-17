@@ -16,8 +16,8 @@ const Painting = () => {
     <Query query={PAINTING_QUERY} id={id}>
       {({ data: { painting } }) => {
         const imageUrl =
-          process.env.NODE_ENV !== "development"
-            ? painting.photo.url
+            process.env.NODE_ENV !== "development"
+            ? painting.photo[0].url
             : REACT_APP_BACKEND_URL + painting.photo[0].url;
         return (
          <div>
