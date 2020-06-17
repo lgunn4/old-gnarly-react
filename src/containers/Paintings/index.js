@@ -2,7 +2,7 @@ import React from "react";
 import Paintings from "../../components/Paintings";
 import Query from "../../components/Query";
 import PAINTINGS_QUERY from "../../queries/article/articles";
-import {Col, Container, Jumbotron,} from "react-bootstrap";
+import {Container} from "react-bootstrap";
 
 const Home = () => {
   return (

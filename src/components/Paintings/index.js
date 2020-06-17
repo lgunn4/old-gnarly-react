@@ -1,16 +1,16 @@
 import React from "react";
 import Card from "../Card";
+import './style.css';
 
 const Paintings = ({ paintings }) => {
-    console.log(paintings);
   return (
-    <div>
-        <ul>
+    <section>
+        <ul className="list">
             {paintings.map((painting, i) => {
                 return <Card painting={painting} key={`article__${painting.id}`} />;
             })}
         </ul>
-      </div>
+    </section>
   );
 };
 

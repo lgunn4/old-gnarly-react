@@ -1,6 +1,6 @@
 import React from "react";
 
-import {Container, Image} from "react-bootstrap";
+import {Image} from "react-bootstrap";
 import profilePicture from "../../assets/profile.jpg"
 import "./style.css"
 
@@ -11,7 +11,7 @@ export const siteDescription = 'My name is old Gnarly this is my site of arf, en
 export default function Layout({ children }) {
 
     return (
-        <Container className="container">
+        <div className="pageContainer">
             <div className="layout">
                 <Image className="headerImage" src={profilePicture} roundedCircle/>
                 <h2>{name}</h2>
@@ -20,7 +20,7 @@ export default function Layout({ children }) {
             <div className="body">
                 {children}
             </div>
-        </Container>
+        </div>
     )
 
 }

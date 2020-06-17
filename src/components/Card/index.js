@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {Image, Row} from "react-bootstrap";
 import {REACT_APP_BACKEND_URL} from "../../constants";
 import Date from "../Date";
+import './styles.css';
 
 const Card = ({ painting }) => {
 
@@ -14,12 +14,12 @@ const Card = ({ painting }) => {
   console.log(imageUrl);
   return (
 
-      <li key={painting.id}>
+      <li className="listItem" key={painting.id}>
         <Link to={`/painting/${painting.id}`}>
-          <a><img src={imageUrl} /></a>
+              <img src={imageUrl} alt={`painting-${painting.id}`}/>
         </Link>
         <br />
-        <small >
+        <small className="lightText">
           <Date dateString={painting.published} />
         </small>
 
