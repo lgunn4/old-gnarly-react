@@ -3,17 +3,19 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 
 import Paintings from "../Paintings";
+import Painting from "../Painting";
 import Layout from "../../components/Layout";
 
 function App() {
   return (
-    <div className="App">
-        <Layout >
+      <Layout>
+        <div className="App">
             <Switch>
                 <Route path="/" component={Paintings} exact />
+                <Route path="/painting/:id" component={Painting} />
             </Switch>
-        </Layout>
-    </div>
+        </div>
+      </Layout>
   );
 }
 

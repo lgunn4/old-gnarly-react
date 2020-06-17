@@ -1,7 +1,7 @@
 import React from "react";
 import Paintings from "../../components/Paintings";
 import Query from "../../components/Query";
-import PAINTINGS_QUERY from "../../queries/article/articles";
+import PAINTINGS_QUERY from "../../queries/painting/paintings";
 import {Container} from "react-bootstrap";
 
 const Home = () => {
