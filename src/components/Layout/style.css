@@ -16,3 +16,7 @@
     height: 6rem;
 }
 
+.instaLogo {
+    display: flex;
+    justify-content: end;
+}

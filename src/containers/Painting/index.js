@@ -27,7 +27,6 @@ const Painting = () => {
                <div><strong><p className="forSaleHeading">For Sale</p></strong></div>
            )}
 
-
            <img src={imageUrl} alt={`painting-${painting.id}`}/>
            <br />
 
