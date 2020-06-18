@@ -4,7 +4,6 @@ import Query from "../../components/Query";
 import ReactMarkdown from "react-markdown";
 
 import PAINTING_QUERY from "../../queries/painting/painting";
-import {REACT_APP_BACKEND_URL} from "../../constants";
 import Date from "../../components/Date";
 import {Link} from "react-router-dom";
 import './styles.css';
