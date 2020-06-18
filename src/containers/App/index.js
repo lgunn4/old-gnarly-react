@@ -4,7 +4,8 @@ import { Switch, Route } from "react-router-dom";
 
 import Paintings from "../Paintings";
 import Painting from "../Painting";
-import Layout from "../../components/Layout";
+import Layout from "../Layout";
+
 
 function App() {
   return (

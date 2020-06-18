@@ -15,15 +15,13 @@ const Painting = () => {
   return (
     <Query query={PAINTING_QUERY} id={id}>
       {({ data: { painting } }) => {
-        const imageUrl =
-            process.env.NODE_ENV !== "development"
-            ? painting.photo[0].url
-            : REACT_APP_BACKEND_URL + painting.photo[0].url;
+        const imageUrl = painting.photo[0].url;
         return (
          <div>
            <small className="lightText">
              <Date dateString={painting.published} />
            </small>
+
            {painting.sold ? (
                <div><strong><p className="soldHeading">SOLD</p></strong></div>
            ) : (
