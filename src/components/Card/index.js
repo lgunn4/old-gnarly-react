@@ -1,17 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {REACT_APP_BACKEND_URL} from "../../constants";
 import Date from "../Date";
 import './styles.css';
 
 const Card = ({ painting }) => {
 
-  const imageUrl =
-    process.env.NODE_ENV !== "development"
-      ? painting.photo[0].url
-      : REACT_APP_BACKEND_URL + painting.photo[0].url;
-
-  console.log(imageUrl);
+  const imageUrl = painting.photo[0].url;
   return (
 
       <li className="listItem" key={painting.id}>
