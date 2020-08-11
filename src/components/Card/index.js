@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Date from "../Date";
 import './styles.css';
+import {Badge} from "react-bootstrap";
 
 const Card = ({ painting }) => {
 
@@ -15,6 +16,11 @@ const Card = ({ painting }) => {
         <br />
         <small className="lightText">
           <Date dateString={painting.published} />
+            {painting.pinned ?
+                (<Badge className="pin" pill variant="danger">
+                    Pinned 📌
+                </Badge>) : null
+            }
         </small>
 
       </li>

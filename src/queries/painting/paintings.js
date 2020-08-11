@@ -11,6 +11,7 @@ const PAINTINGS_QUERY = gql`
       }
       sold
       published
+      pinned
     }
   }
 `;
