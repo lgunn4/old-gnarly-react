@@ -16,11 +16,6 @@ const Card = ({ painting }) => {
         <br />
         <small className="lightText">
           <Date dateString={painting.published} />
-            {painting.pinned ?
-                (<Badge className="pin" pill variant="danger">
-                    Pinned
-                </Badge>) : null
-            }
         </small>
 
       </li>
