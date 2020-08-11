@@ -18,7 +18,7 @@ const Card = ({ painting }) => {
           <Date dateString={painting.published} />
             {painting.pinned ?
                 (<Badge className="pin" pill variant="danger">
-                    Pinned 📌
+                    Pinned
                 </Badge>) : null
             }
         </small>
