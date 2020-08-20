@@ -4,21 +4,21 @@ import './style.css';
 import {ButtonGroup, ToggleButton} from "react-bootstrap";
 
 const Paintings = ({ paintings }) => {
-    const [filteredPaintings, setFilteredPaintings] = useState(paintings);
+    const [filteredPaintings, setFilteredPaintings] = useState(paintings.filter(painting => !painting.sold));
     const [radioValue, setRadioValue] = useState('1');
 
     const radios = [
-        { name: 'All', value: '1' },
-        { name: 'For Sale', value: '2' },
-        { name: 'Sold', value: '3' },
+        { name: 'For Sale', value: '1' },
+        { name: 'Sold', value: '2' },
+        { name: 'All', value: '3' },
     ];
 
     const changeRadio = (radioValue) => {
         setRadioValue(radioValue);
 
-        if (radioValue === '2') {
+        if (radioValue === '1') {
             setFilteredPaintings(paintings.filter(painting => !painting.sold));
-        } else if (radioValue === '3') {
+        } else if (radioValue === '2') {
             setFilteredPaintings(paintings.filter(painting => painting.sold));
         } else {
             setFilteredPaintings(paintings);
