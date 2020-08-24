@@ -11,6 +11,7 @@ const PAINTING_QUERY = gql`
       }
       sold
       published
+      price
     }
   }
 `;
