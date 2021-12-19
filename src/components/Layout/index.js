@@ -16,10 +16,10 @@ export default function Layout({ children, configuration }) {
                 </Button>
                 <div className="layout">
                     <Link to="/">
-                    <Image className="headerImage" src={configuration.profilePicture.url} roundedCircle/>
+                    <Image className="headerImage" src={configuration.Profile.data.attributes.name} roundedCircle/>
                     </Link>
-                    <h2>{configuration.websiteName}</h2>
-                    <ReactMarkdown>{configuration.websiteDescription}</ReactMarkdown>
+                    <h2>{configuration.Name}</h2>
+                    <ReactMarkdown>{configuration.Bio}</ReactMarkdown>
                 </div>
                 <br />
                 <div className="body">

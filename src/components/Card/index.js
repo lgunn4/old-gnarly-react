@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 import Date from "../Date";
 import './styles.css';
 
-const Card = ({ painting }) => {
-
-  const imageUrl = painting.photo[0].url;
+const Card = ({ post }) => {
+    console.log(post)
+  const imageUrl = post.attributes.Images.data[0].attributes.name;
   return (
 
-      <li className="listItem" key={painting.id}>
-        <Link to={`/painting/${painting.id}`}>
-              <img src={imageUrl} alt={`painting-${painting.id}`}/>
+      <li className="listItem" key={post.id}>
+        <Link to={`/post/${post.id}`}>
+              <img src={imageUrl} alt={`post-${post.attributes.Title}`}/>
         </Link>
         <br />
         <small className="lightText">
-          <Date dateString={painting.published} />
+          <Date dateString={post.attributes.Date} />
         </small>
 
       </li>

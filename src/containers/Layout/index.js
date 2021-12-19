@@ -1,13 +1,13 @@
 import React from "react";
 import Query from "../../components/Query";
-import CONFIGURATIONS_QUERY from "../../queries/configuration/configurations";
+import CONFIGURATION_QUERY from "../../queries/configuration/configuration";
 import Layout from "../../components/Layout";
 
 const Home = ({children}) => {
     return (
-            <Query query={CONFIGURATIONS_QUERY}>
-                {({ data: { configurations } }) => {
-                    return <Layout configuration={configurations[0]} children={children} />;
+            <Query query={CONFIGURATION_QUERY}>
+                {({ data: { configuration: {data: { attributes }} } }) => {
+                    return <Layout configuration={attributes} children={children} />;
                 }}
             </Query>
     );

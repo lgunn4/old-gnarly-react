@@ -2,8 +2,8 @@ import React from "react";
 
 import { Switch, Route } from "react-router-dom";
 
-import Paintings from "../Paintings";
-import Painting from "../Painting";
+import HomePage from "../HomePage";
+import Post from "../Post";
 import Layout from "../Layout";
 
 
@@ -12,8 +12,8 @@ function App() {
       <Layout>
         <div className="App">
             <Switch>
-                <Route path="/" component={Paintings} exact />
-                <Route path="/painting/:id" component={Painting} />
+                <Route path="/" component={HomePage} exact />
+                <Route path="/post/:id" component={Post} />
             </Switch>
         </div>
       </Layout>
