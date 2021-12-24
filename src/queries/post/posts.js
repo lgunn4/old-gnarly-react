@@ -8,7 +8,16 @@ query Post {
       attributes {
         Title
         Date
+        Description
         Text
+        categories {
+          data {
+            attributes {
+              Name
+              Variant
+            }
+          }
+        }
         Images {
           data {
             attributes {

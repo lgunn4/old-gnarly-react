@@ -2,22 +2,27 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Date from "../Date";
 import './styles.css';
+import BadgeList from "../BadgeList";
+
 
 const Card = ({ post }) => {
-    console.log(post)
-  const imageUrl = post.attributes.Images.data[0].attributes.name;
-  return (
+    return (
+        <li className="listItem" key={post.id}>
+            <Link to={`/post/${post.id}`}>
+                <h4>{post.attributes.Title}</h4>
+            </Link>
 
-      <li className="listItem" key={post.id}>
-        <Link to={`/post/${post.id}`}>
-              <img src={imageUrl} alt={`post-${post.attributes.Title}`}/>
-        </Link>
-        <br />
-        <small className="lightText">
-          <Date dateString={post.attributes.Date} />
-        </small>
+            <small className="lightText">
+                <Date dateString={post.attributes.Date} />
+            </small>
 
-      </li>
+            <p>{post.attributes.Description}</p>
+
+            <BadgeList badgeData={post.attributes.categories.data} />
+
+            <br/>
+
+        </li>
   );
 };
 
