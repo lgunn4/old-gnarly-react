@@ -16,10 +16,9 @@ const Post = ({ post }) => {
             <br />
             <ReactMarkdown source={post.attributes.Text} />
 
-
             <div className="backToHome">
                 <Link to="/">
-                    <p>← Back to home</p>
+                    <p>← Back Home</p>
                 </Link>
             </div>
         </div>

@@ -11,7 +11,6 @@ const Home = () => {
   return (
     <Query query={POST_QUERY} id={id}>
       {({ data: { post } }) => {
-        console.log(post);
         return (<Post post={post.data}/>);
       }}
     </Query>

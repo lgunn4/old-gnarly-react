@@ -7,12 +7,12 @@ import BadgeList from "../BadgeList";
 
 const Card = ({ post }) => {
     return (
-        <li className="listItem" key={post.id}>
+        <li className="list-item">
             <Link to={`/post/${post.id}`}>
                 <h4>{post.attributes.Title}</h4>
             </Link>
 
-            <small className="lightText">
+            <small className="light-text">
                 <Date dateString={post.attributes.Date} />
             </small>
 
@@ -21,7 +21,6 @@ const Card = ({ post }) => {
             <BadgeList badgeData={post.attributes.categories.data} />
 
             <br/>
-
         </li>
   );
 };
