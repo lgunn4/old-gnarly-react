@@ -10,8 +10,7 @@ query config {
         Profile {
           data {
             attributes {
-              name
-              
+              url 
             }
           }
         }

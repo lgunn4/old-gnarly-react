@@ -12,7 +12,7 @@ export default function Layout({ children, configuration }) {
 
                 <div className="layout">
                     <Link to="/">
-                    <Image className="headerImage" src={configuration.Profile.data.attributes.name} roundedCircle/>
+                    <Image className="headerImage" src={configuration.Profile.data.attributes.url} roundedCircle/>
                     </Link>
                     <h2>{configuration.Name}</h2>
                     <ReactMarkdown>{configuration.Bio}</ReactMarkdown>
