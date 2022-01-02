@@ -15,7 +15,9 @@ export default function Layout({ children, configuration }) {
                     <Image className="headerImage" src={configuration.Profile.data.attributes.url} roundedCircle/>
                     </Link>
                     <h2>{configuration.Name}</h2>
-                    <ReactMarkdown>{configuration.Bio}</ReactMarkdown>
+                    <div className="bio">
+                        <ReactMarkdown>{configuration.Bio}</ReactMarkdown>
+                    </div>
                 </div>
                 <hr />
                 <div className="body">

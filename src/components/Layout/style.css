@@ -1,7 +1,7 @@
 .pageContainer {
     max-width: 36rem;
     padding: 0 1rem;
-    margin: 3rem auto 6rem;
+    margin: 3rem auto;
 }
 
 .layout {
@@ -14,4 +14,8 @@
 .headerImage {
     width: 6rem;
     height: 6rem;
+}
+
+.bio {
+    text-align: center;
 }

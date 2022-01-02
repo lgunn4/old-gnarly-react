@@ -8,7 +8,7 @@ const Query = ({ children, query, id }) => {
     variables: { id: id }
   });
 
-  if (loading) return (<ReactLoading className="queryLoader" type="bubbles" color="red"/>);
+  if (loading) return (<ReactLoading className="queryLoader" type="bars" color="black"/>);
   if (error) return <p>Error: {JSON.stringify(error)}</p>;
   return children({ data });
 };
