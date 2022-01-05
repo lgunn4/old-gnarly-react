@@ -12,6 +12,7 @@ query Post {
         Text
         categories {
           data {
+            id
             attributes {
               Name
               Variant

@@ -22,8 +22,8 @@ const Post = ({ post }) => {
                 </Col>
             </Row>
 
-            <BadgeList badgeData={post.attributes.categories.data} />
-            <div></div>
+            <BadgeList badgeData={post.attributes.categories} />
+            <div/>
             <br/>
             <ReactMarkdown source={post.attributes.Text} />
 

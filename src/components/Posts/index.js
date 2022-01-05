@@ -1,11 +1,13 @@
 import React from "react";
 import Card from "../Card";
+import Categories from "../../containers/Categories"
 import './style.css';
 
 const Posts = ({ posts }) => {
 
     return (
     <section>
+        <Categories/>
         <br />
         <ul className="post-list">
             {posts.map((post) => {
