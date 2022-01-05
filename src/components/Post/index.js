@@ -3,17 +3,28 @@ import './style.css';
 import Date from "../Date";
 import ReactMarkdown from "react-markdown";
 import {Link} from "react-router-dom";
+import {Col, Row} from "react-bootstrap";
+import BadgeList from "../BadgeList";
 
 const Post = ({ post }) => {
     return (
         <div>
-            <h2>{post.attributes.Title}</h2>
-            <small className="lightText">
-                <Date dateString={post.attributes.Date} />
-            </small>
+            <br/>
+            <Row>
+                <Col md={8}>
+                    <h4>{post.attributes.Title}</h4>
+                </Col>
 
-            <div/>
-            <br />
+                <Col md={4}>
+                    <small className="light-text">
+                        <Date dateString={post.attributes.Date} />
+                    </small>
+                </Col>
+            </Row>
+
+            <BadgeList badgeData={post.attributes.categories.data} />
+            <div></div>
+            <br/>
             <ReactMarkdown source={post.attributes.Text} />
 
             <div className="backToHome">

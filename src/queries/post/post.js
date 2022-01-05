@@ -8,7 +8,16 @@ query Post($id: ID!) {
       attributes {
         Title
         Date
+        Description
         Text
+        categories {
+          data {
+            attributes {
+              Name
+              Variant
+            }
+          }
+        }
         Images {
           data {
             attributes {
@@ -16,6 +25,7 @@ query Post($id: ID!) {
             }
           }
         }
+        Pinned
       }
     }
   }
