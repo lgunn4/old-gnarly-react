@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { ApolloProvider } from "react-apollo";
-import App from "./containers/App";
+import App from "./app";
 import client from "./utils/apolloClient";
 import { BrowserRouter as Router } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,7 +12,7 @@ ReactDOM.render(
   <Router>
       <ScrollToTop>
           <ApolloProvider client={client}>
-              <App />
+              <App/>
           </ApolloProvider>
       </ScrollToTop>
   </Router>,

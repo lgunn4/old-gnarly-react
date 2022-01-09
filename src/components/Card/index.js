@@ -23,13 +23,11 @@ const Card = ({ post }) => {
                 </Col>
             </Row>
 
-            <BadgeList badgeData={post.attributes.categories} />
+            <BadgeList badgeData={post.attributes.categories.data} />
+
             <div/>
             <br/>
-
             <p>{post.attributes.Description}</p>
-
-
             <br/>
         </li>
   );

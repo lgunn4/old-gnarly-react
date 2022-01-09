@@ -1,3 +1,7 @@
 .badge-pill {
     margin-right: 0.5em;
 }
+
+.badge-pill:hover {
+    opacity: 75%;
+}

@@ -1,10 +1,10 @@
-.pageContainer {
+.page-container {
     max-width: 36rem;
     padding: 0 1rem;
     margin: 3rem auto;
 }
 
-.layout {
+.configuration {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,4 +18,22 @@
 
 .bio {
     text-align: center;
+}
+
+.sticky-home-button {
+    z-index: 2;
+    position: sticky;
+    top: 10vh;
+    left: 10vh;
+}
+
+.layout button {
+    border-radius: 50%;
+}
+
+@media (max-width: 60rem) {
+    .sticky-home-button {
+        top: 3vh;
+        left: 3vh;
+    }
 }

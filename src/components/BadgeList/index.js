@@ -6,16 +6,20 @@ import {Link} from "react-router-dom";
 const BadgeList = ({ badgeData }) => {
     let badges = [];
 
-    badgeData.data.forEach(bd =>
+    badgeData.forEach(bd =>
         badges.push(
-            <Link key={bd.id} to={`/category/${bd.id}`}>
-                <Badge pill key={bd.id}
-                       variant={bd.attributes.Variant}>{bd.attributes.Name}
-                </Badge>
-            </Link>)
-    );
+                <Link key={bd.id} to={`/category/${bd.id}`}>
+                    <Badge pill key={bd.id}
+                           variant={bd.attributes.Variant}>{bd.attributes.Name}
+                           <div className="overlay"/>
+                    </Badge>
+                </Link>));
 
-    return badges
+    return (
+        <div>
+            <br/>
+            {badges}
+        </div>);
 };
 
 export default BadgeList;

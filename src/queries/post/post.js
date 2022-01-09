@@ -12,6 +12,7 @@ query Post($id: ID!) {
         Text
         categories {
           data {
+            id
             attributes {
               Name
               Variant

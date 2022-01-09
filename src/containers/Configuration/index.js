@@ -3,7 +3,7 @@ import Query from "../../components/Query";
 import CONFIGURATION_QUERY from "../../queries/configuration/configuration";
 import Layout from "../../components/Layout";
 
-const Home = ({children}) => {
+const Configuration = ({children}) => {
     return (
             <Query query={CONFIGURATION_QUERY}>
                 {({ data: { configuration: {data: { attributes }} } }) => {
@@ -13,4 +13,4 @@ const Home = ({children}) => {
     );
 };
 
-export default Home;
+export default Configuration;

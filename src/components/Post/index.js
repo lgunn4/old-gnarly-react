@@ -22,7 +22,7 @@ const Post = ({ post }) => {
                 </Col>
             </Row>
 
-            <BadgeList badgeData={post.attributes.categories} />
+            <BadgeList badgeData={post.attributes.categories.data} />
             <div/>
             <br/>
             <ReactMarkdown source={post.attributes.Text} />
