@@ -5,3 +5,7 @@
 .light-text {
     color: #666;
 }
+
+.date-text {
+    text-align: right;
+}

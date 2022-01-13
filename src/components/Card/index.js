@@ -16,7 +16,7 @@ const Card = ({ post }) => {
                 </Link>
                 </Col>
 
-                <Col md={4}>
+                <Col className="date-text" md={4}>
                     <small className="light-text">
                         <Date dateString={post.attributes.Date} />
                     </small>
