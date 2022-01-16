@@ -3,7 +3,7 @@ import Card from "../Card";
 import "./style.css";
 
 const PostList = ({ posts }) => {
-    const sortByDate = (a,b) => a.attributes.Date > b.attributes.Date ? 1 : -1;
+    const sortByDate = (a,b) => a.attributes.Date < b.attributes.Date ? 1 : -1;
 
     const pinnedPosts = posts.filter(post => post.attributes.Pinned).sort((a, b) => sortByDate(a, b));
     const regularPosts = posts.filter(post => !post.attributes.Pinned).sort((a, b) => sortByDate(a, b));

@@ -36,4 +36,10 @@
         top: 3vh;
         left: 3vh;
     }
+
+    .date-text {
+        text-align: left;
+    }
+
+
 }

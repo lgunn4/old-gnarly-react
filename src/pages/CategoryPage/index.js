@@ -2,14 +2,16 @@ import React from "react";
 import {Container} from "react-bootstrap";
 import {useParams} from "react-router";
 import CategoryPosts from "../../containers/CategoryPosts";
-import Category from "../../containers/Category";
+import Categories from "../../containers/Categories";
 
 const CategoryPage = () => {
     let { id } = useParams();
 
     return (
         <Container>
-            <Category id={id}/>
+            <div className="category-list">
+                <Categories enabledId={id}/>
+            </div>
             <CategoryPosts id={id}/>
         </Container>
 

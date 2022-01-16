@@ -2,6 +2,6 @@
     margin-right: 0.5em;
 }
 
-.badge-pill:hover {
-    opacity: 0.75;
+.hover-shadow:hover {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.275)!important
 }

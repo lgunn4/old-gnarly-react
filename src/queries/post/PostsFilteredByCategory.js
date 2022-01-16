@@ -13,6 +13,7 @@ query categories($id: ID!) {
                   Title
                   Date
                   Description
+                  Pinned
                   categories {
                     data {
                         id 
